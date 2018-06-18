@@ -1,0 +1,41 @@
+﻿<UserControl
+    x:Class="MyTeletouchBand.Controls.BandControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyTeletouchBand.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="{StaticResource CommonPagesBackgroundBrush}">
+        <StackPanel x:Name="NavBar" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Visibility="Visible">
+            <Button Name="ButtonMouse" MinHeight="25" Style="{StaticResource NoContentButton}" Click="ButtonMouse_Click" FontFamily="Global User Interface">
+                <Button.Content>
+                    <Image Source="../Assets/mouse.png" Width="25" Height="25" Margin="0,0,0,0"></Image>
+                </Button.Content>
+            </Button>
+            <Button Name="ButtonJoystick" Style="{StaticResource NoContentButton}" Click="ButtonJoystick_Click" FontFamily="Global User Interface">
+                <Button.Content>
+                    <Image Source="../Assets/joystick.png" Width="25" Height="25" Margin="0,0,0,0"></Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <TextBlock x:Name="info" FontSize="32"></TextBlock>
+            <TextBlock x:Name="info1" FontSize="32"></TextBlock>
+            <TextBlock x:Name="info2" FontSize="32"></TextBlock>
+            <TextBlock x:Name="info3" FontSize="32"></TextBlock>
+            <TextBlock x:Name="info4" FontSize="32"></TextBlock>
+            <TextBlock x:Name="info5" FontSize="32"></TextBlock>
+            <ToggleSwitch x:Name="toggleSwitchLock" Header="Lock button down" 
+              IsOn="False" OnContent="On" OffContent="Off" 
+              Toggled="toggleSwitchLock_Toggled"/>
+            <ToggleSwitch x:Name="toggleSwitchAutoOnOff" Header="Auto On/Off" 
+              IsOn="False" OnContent="On" OffContent="Off" 
+              Toggled="toggleSwitchAutoOnOff_Toggled"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
